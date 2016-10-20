@@ -5,6 +5,7 @@
 		<script type="text/javascript" src="js/angular.js"></script>
 		<script type="text/javascript" src="js/bootstrap.js"></script>
 		<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+		<script type="text/javascript" src="script.js"></script>
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.css"></script>
 
 		<style>
@@ -13,11 +14,11 @@
 			}
 		</style>
 	</head>
-	<body ng-app="">
+	<body ng-app="appSki">
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-8 center-block">
-					<h1 class="text-center">Klasyfikacja szkoczków narciarskich<h1>
+					<h1 class="text-center">Classification of ski jumpers<h1>
 						<br>
 					<div class="input-group">
 						<span class="input-group-addon">Szukaj:</span>
@@ -29,7 +30,7 @@
 							<thead>
 								<tr>
 									<th ng-repeat="naglowek in [
-									'Numer', 'Imie', 'Narodowość'
+									'FIS code', 'Competitor', 'Birthdate', 'Nation'
 									]">
 										{{naglowek}}
 								</tr>
