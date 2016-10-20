@@ -1,6 +1,6 @@
 var app = angular.module('appSki', [])
                 .controller('contrTabSki', [
-                        '$scope', function($scope) {
+                        '$scope', '$filter', function($scope) {
                             
                         $scope.jumpers = [
  {

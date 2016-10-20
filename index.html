@@ -18,11 +18,11 @@
 		<div class="container" ng-controller="contrTabSki">
 			<div class="row">
 				<div class="col-sm-8 center-block">
-					<h1 class="text-center">Classification of ski jumpers<h1>
+					<h1 class="text-center">Classification of ski jumpers</h1>
 						<br>
 					<div class="input-group">
 						<span class="input-group-addon">Szukaj:</span>
-						<input type="text" class="form-controll" placeholder="czego szukasz?">
+						<input type="text" class="form-controll" placeholder=" Czego szukasz?" ng-model="search">
 					</div>
 					<br>
 					<div class="table-responsive">
@@ -36,7 +36,7 @@
 								</tr>
 							</thead>
 							<tbody>
-								<tr ng-repeat="jumper in jumpers">
+								<tr ng-repeat="jumper in jumpers | filter : search">
 									<td>{{jumper.FIELD2}}</td>
 									<td>{{jumper.FIELD3}}</td>
 									<td>{{jumper.FIELD7}}</td>
