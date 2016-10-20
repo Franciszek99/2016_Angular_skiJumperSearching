@@ -28,9 +28,10 @@
 						<table class="table table-hoover">
 							<thead>
 								<tr>
-									<th>Numer</th>
-									<th>Imie</th>
-									<th>Narodowość</th>
+									<th ng-repeat="naglowek in [
+									'Numer', 'Imie', 'Narodowość'
+									]">
+										{{naglowek}}
 								</tr>
 							</thead>
 							<tbody>
