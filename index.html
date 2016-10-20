@@ -15,7 +15,7 @@
 		</style>
 	</head>
 	<body ng-app="appSki">
-		<div class="container">
+		<div class="container" ng-controller="contrTabSki">
 			<div class="row">
 				<div class="col-sm-8 center-block">
 					<h1 class="text-center">Classification of ski jumpers<h1>
@@ -30,13 +30,17 @@
 							<thead>
 								<tr>
 									<th ng-repeat="naglowek in [
-									'FIS code', 'Competitor', 'Birthdate', 'Nation'
+									'FIS code', 'Competitor', 'Nation'
 									]">
 										{{naglowek}}
 								</tr>
 							</thead>
 							<tbody>
-								
+								<tr ng-repeat="jumper in jumpers">
+									<td>{{jumper.FIELD2}}</td>
+									<td>{{jumper.FIELD3}}</td>
+									<td>{{jumper.FIELD7}}</td>
+								</tr>
 							</tbody>
 						</table>
 					</div>
